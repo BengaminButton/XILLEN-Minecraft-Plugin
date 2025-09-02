@@ -1,0 +1,62 @@
+# XILLEN Security Plugin Configuration
+# Version: 2.0
+
+# Anti-Cheat Settings
+anti-cheat:
+  enabled: true
+  max-violations: 10
+  violation-reset-time: 300000 # 5 minutes in milliseconds
+  
+  # Movement checks
+  movement:
+    enabled: true
+    max-speed: 0.8
+    max-fly-speed: 0.5
+    check-frequency: 20 # ticks
+    
+  # Combat checks
+  combat:
+    enabled: true
+    max-reach: 4.5
+    max-cps: 20 # clicks per second
+    
+  # Block checks
+  blocks:
+    enabled: true
+    max-break-speed: 10
+    max-place-speed: 15
+
+# Security Settings
+security:
+  enabled: true
+  
+  # Command blocking
+  blocked-commands:
+    - "op"
+    - "deop"
+    - "stop"
+    - "restart"
+    - "reload"
+    
+  # Permission bypass
+  bypass-permission: "xillen.bypass"
+  
+  # Logging
+  log-violations: true
+  log-commands: true
+  log-connections: true
+
+# Messages
+messages:
+  prefix: "&8[&cXILLEN&8] &r"
+  no-permission: "&cYou don't have permission to use this command!"
+  plugin-reloaded: "&aConfiguration reloaded successfully!"
+  player-banned: "&cPlayer {player} has been banned for {reason}"
+  violation-detected: "&eViolation detected: {type} (Level: {level})"
+
+# Logging
+logging:
+  enabled: true
+  log-file: "logs/xillen-security.log"
+  max-file-size: "10MB"
+  max-files: 5

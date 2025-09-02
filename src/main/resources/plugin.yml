@@ -1,0 +1,4 @@
+name: XillenSecurity
+version: 2.0
+main: com.xillen.security.SimpleSecurityPlugin
+api-version: 1.20
